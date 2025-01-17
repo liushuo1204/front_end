@@ -1,9 +1,5 @@
-simport
-axios
-from
-'axios'
-import {Message} from 'element-ui'
-import {MessageBox} from "element-ui";
+import axios from 'axios'
+import {Message, MessageBox} from 'element-ui'
 import router from '@/router'
 import Qs from 'qs'
 
