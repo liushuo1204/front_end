@@ -11,15 +11,19 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 import App from './App.vue'
 import router from './router'
+// 安装持久化插件 npm i pinia-plugin-persist
+// 导入持久化插件
+import piniaPersist from "pinia-plugin-persist"
 
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
+// vue2
+// Vue.prototype.$haha
+// vue3 相当于 Vue.prototype.$haha
+app.config.globalProperties.$haha = "孙悟空"
 const pinia = createPinia()
-// 安装持久化插件 npm i pinia-plugin-persist
-// 导入持久化插件
-import piniaPersist from "pinia-plugin-persist"
 
 pinia.use(piniaPersist)
 app.use(pinia)
