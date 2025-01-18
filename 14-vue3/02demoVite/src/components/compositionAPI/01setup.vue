@@ -2,10 +2,12 @@
   <h1>setup</h1>
   {{ str }}
   <input v-model="str" type="text">
+  <button @click="goTo">同级跳转</button>
 </template>
 <!--lang语言  -->
 <script lang="ts">
 import {defineComponent, ref} from 'vue';
+import router from '@/router'
 
 // defineComponent 自定义一个组件， 内部传入配置对象
 export default defineComponent({
@@ -15,9 +17,14 @@ export default defineComponent({
   setup() {
     // ref定义一个响应式数据
     let str = ref("我是刘德华")
+    const goTo = () => {
+      router.push({
+        path: '/home/about/detail/hello/10'
+      })
+    }
     return {
       // return才能用
-      str
+      str, goTo
     }
   }
 })
