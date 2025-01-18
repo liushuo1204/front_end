@@ -140,7 +140,7 @@ const router = createRouter({
           path: "teleport",
           name: "teleport",
           component: () =>
-            import("../components/componentsOther/08teleport.vue"),
+            import("../components/componentsOther/08Teleport.vue"),
         },
         {
           path: "provide_inject",
