@@ -159,6 +159,20 @@ const router = createRouter({
         }
       ],
     },
+    {
+      path: '/home/about/detail',
+      name: 'hi',
+      component: HomeView,
+      children: [
+        {
+          // :id /:名字 表示等待传入的值，字段名就是起的名字
+          // (\d+) 正则表达式，表示匹配数字
+          path: 'hello/:id(\\d+)',
+          name: 'hello',
+          component: () => import('../views/HiView.vue')
+        }
+      ]
+    }
   ],
 });
 
