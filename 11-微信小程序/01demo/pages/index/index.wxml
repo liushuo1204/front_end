@@ -44,4 +44,5 @@
 	<!-- catch:tap阻止冒泡 -->
 		<view class="son" style="width: 100rpx;height: 100rpx;background-color: aquamarine;" catch:tap="son"></view>
 	</view>
+	<button bind:tap="gopage" data-uid="123">跳转到分包</button>
 </view>

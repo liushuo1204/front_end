@@ -12,32 +12,32 @@ const wxml = (url) => `<view class="container">
 
 const style = {
 
-    img: {
-        width: 200,
-        height: 120,
-    },
-    container: {
-        height: 200,
-        width: 200,
-        flexDirection: 'column'
-    },
-    title: {
-        height: 20,
-        width: 200,
-        color: '#15c15f',
-        margin: 4,
+  img: {
+    width: 200,
+    height: 120,
+  },
+  container: {
+    height: 200,
+    width: 200,
+    flexDirection: 'column'
+  },
+  title: {
+    height: 20,
+    width: 200,
+    color: '#15c15f',
+    margin: 4,
 
-    },
-    desc: {
-        fontSize: 13,
-        height: 40,
-        width: 200,
-        color: '#4c4c4c',
-        margin: 4,
-    }
+  },
+  desc: {
+    fontSize: 13,
+    height: 40,
+    width: 200,
+    color: '#4c4c4c',
+    margin: 4,
+  }
 }
 
 module.exports = {
-    wxml,
-    style
+  wxml,
+  style
 }

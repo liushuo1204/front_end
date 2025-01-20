@@ -1,6 +1,7 @@
 {
   "component": true,
   "navigationBarTitleText": "form",
+
   "usingComponents": {
     "mp-form-page": "weui-miniprogram/form-page/form-page",
     "mp-toptips": "weui-miniprogram/toptips/toptips",

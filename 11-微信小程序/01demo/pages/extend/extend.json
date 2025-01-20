@@ -1,6 +1,6 @@
 {
-  "disableScroll": true,
+"disableScroll": true,
   "usingComponents": {
-    "mp-tabs": "../../packageExtend/components/tabs/tabs"
+	"mp-tabs": "../../packageExtend/components/tabs/tabs"
   }
 }

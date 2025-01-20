@@ -1,15 +1,17 @@
+
+
 Component({
-    options: {
-        addGlobalClass: true
+  options: {
+    addGlobalClass: true
+  },
+  properties: {
+    extClass: {
+      type: String,
+      value: ''
     },
-    properties: {
-        extClass: {
-            type: String,
-            value: ''
-        },
-        content: {
-            type: String,
-            value: ''
-        }
+    content: {
+      type: String,
+      value: ''
     }
+  }
 })

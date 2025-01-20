@@ -11,6 +11,14 @@
     "pages/kuozhan/kuozhan",
     "pages/extend/extend"
   ],
+  "subPackages": [
+	  {
+		  "root": "modulesA",
+		  "pages": [
+			  "pages/dog/dog"
+		  ]
+	  }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "Weixin",

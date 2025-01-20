@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "mp-tabs": "../../packageExtend/components/tabs/tabs"
+	  "mp-dialog": "weui-miniprogram/dialog/dialog",
+	  "mp-tabs": "../../packageExtend/components/tabs/tabs"
   }
 }
