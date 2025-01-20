@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", {value: true});
 exports.setContentAnimate = void 0;
 var utils_1 = require("../common/utils");
-
 function useAnimation(context, expanded, mounted, height) {
     var animation = wx.createAnimation({
         duration: 0,
@@ -33,7 +32,6 @@ function useAnimation(context, expanded, mounted, height) {
         animation: animation.export(),
     });
 }
-
 function setContentAnimate(context, expanded, mounted) {
     (0, utils_1.getRect)(context, '.van-collapse-item__content')
         .then(function (rect) {
@@ -43,5 +41,4 @@ function setContentAnimate(context, expanded, mounted) {
             useAnimation(context, expanded, mounted, height);
         });
 }
-
 exports.setContentAnimate = setContentAnimate;

@@ -30,19 +30,16 @@ var defaultOptions = {
     },
 };
 var currentOptions = __assign({}, defaultOptions);
-
 function parseOptions(message) {
     if (message == null) {
         return {};
     }
     return typeof message === 'string' ? {message: message} : message;
 }
-
 function getContext() {
     var pages = getCurrentPages();
     return pages[pages.length - 1];
 }
-
 function Notify(options) {
     options = __assign(__assign({}, currentOptions), parseOptions(options));
     var context = options.context || getContext();
@@ -56,7 +53,6 @@ function Notify(options) {
     }
     console.warn('未找到 van-notify 节点，请确认 selector 及 context 是否正确');
 }
-
 exports.default = Notify;
 Notify.clear = function (options) {
     options = __assign(__assign({}, defaultOptions), parseOptions(options));

@@ -1,3 +1,4 @@
+
 Component({
     options: {
         addGlobalClass: true

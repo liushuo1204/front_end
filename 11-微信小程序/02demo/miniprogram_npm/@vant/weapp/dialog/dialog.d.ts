@@ -2,7 +2,6 @@
 /// <reference types="miniprogram-api-typings" />
 export type Action = 'confirm' | 'cancel' | 'overlay';
 type DialogContext = WechatMiniprogram.Page.TrivialInstance | WechatMiniprogram.Component.TrivialInstance;
-
 interface DialogOptions {
     lang?: string;
     show?: boolean;
@@ -42,7 +41,6 @@ interface DialogOptions {
     closeOnClickOverlay?: boolean;
     confirmButtonOpenType?: string;
 }
-
 declare const Dialog: {
     (options: DialogOptions): Promise<WechatMiniprogram.Component.TrivialInstance>;
     alert(options: DialogOptions): Promise<WechatMiniprogram.Component.TrivialInstance>;

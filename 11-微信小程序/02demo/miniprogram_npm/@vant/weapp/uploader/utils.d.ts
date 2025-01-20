@@ -8,9 +8,7 @@ export interface File {
     isImage?: boolean;
     isVideo?: boolean;
 }
-
 export declare function isImageFile(item: File): boolean;
-
 export declare function isVideoFile(item: File): boolean;
 
 export declare function chooseFile({

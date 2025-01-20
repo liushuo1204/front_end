@@ -6,11 +6,9 @@ var utils_1 = require("../common/utils");
 var validator_1 = require("../common/validator");
 var version_1 = require("../common/version");
 var canvas_1 = require("./canvas");
-
 function format(rate) {
     return Math.min(Math.max(rate, 0), 100);
 }
-
 var PERIMETER = 2 * Math.PI;
 var BEGIN_ANGLE = -Math.PI / 2;
 var STEP = 1;

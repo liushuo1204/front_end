@@ -2,12 +2,10 @@
 Object.defineProperty(exports, "__esModule", {value: true});
 var relation_1 = require("../common/relation");
 var component_1 = require("../common/component");
-
 function emit(target, value) {
     target.$emit('input', value);
     target.$emit('change', value);
 }
-
 (0, component_1.VantComponent)({
     field: true,
     relation: (0, relation_1.useParent)('checkbox-group'),

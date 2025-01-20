@@ -12,7 +12,6 @@ var getClassNames = function (name) {
         'leave-to': "van-".concat(name, "-leave-to van-").concat(name, "-leave-active leave-to-class leave-active-class"),
     });
 };
-
 function transition(showDefaultValue) {
     return Behavior({
         properties: {
@@ -150,5 +149,4 @@ function transition(showDefaultValue) {
         },
     });
 }
-
 exports.transition = transition;

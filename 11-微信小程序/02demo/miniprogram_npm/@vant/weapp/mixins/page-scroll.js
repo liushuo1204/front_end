@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", {value: true});
 exports.pageScrollMixin = void 0;
 var validator_1 = require("../common/validator");
 var utils_1 = require("../common/utils");
-
 function onPageScroll(event) {
     var _a = (0, utils_1.getCurrentPage)().vanPageScroller, vanPageScroller = _a === void 0 ? [] : _a;
     vanPageScroller.forEach(function (scroller) {
@@ -13,7 +12,6 @@ function onPageScroll(event) {
         }
     });
 }
-
 function pageScrollMixin(scroller) {
     return Behavior({
         attached: function () {
@@ -48,5 +46,4 @@ function pageScrollMixin(scroller) {
         },
     });
 }
-
 exports.pageScrollMixin = pageScrollMixin;

@@ -32,7 +32,6 @@ module.exports =
         return module.exports
         /** *** */
     }
-
     /** *** */
     /** *** */
     /** *** */ 	// expose the modules object (__webpack_modules__)

@@ -24,19 +24,15 @@ var component_1 = require("../common/component");
 var validator_1 = require("../common/validator");
 var shared_1 = require("../picker/shared");
 var currentYear = new Date().getFullYear();
-
 function isValidDate(date) {
     return (0, validator_1.isDef)(date) && !isNaN(new Date(date).getTime());
 }
-
 function range(num, min, max) {
     return Math.min(Math.max(num, min), max);
 }
-
 function padZero(val) {
     return "00".concat(val).slice(-2);
 }
-
 function times(n, iteratee) {
     var index = -1;
     var result = Array(n < 0 ? 0 : n);
@@ -45,7 +41,6 @@ function times(n, iteratee) {
     }
     return result;
 }
-
 function getTrueValue(formattedValue) {
     if (formattedValue === undefined) {
         formattedValue = '1';
@@ -55,7 +50,6 @@ function getTrueValue(formattedValue) {
     }
     return parseInt(formattedValue, 10);
 }
-
 function getMonthEndDay(year, month) {
     return 32 - new Date(year, month - 1, 32).getDate();
 }

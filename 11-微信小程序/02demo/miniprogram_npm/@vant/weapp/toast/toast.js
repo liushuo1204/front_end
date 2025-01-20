@@ -26,16 +26,13 @@ var defaultOptions = {
 };
 var queue = [];
 var currentOptions = __assign({}, defaultOptions);
-
 function parseOptions(message) {
     return (0, validator_1.isObj)(message) ? message : {message: message};
 }
-
 function getContext() {
     var pages = getCurrentPages();
     return pages[pages.length - 1];
 }
-
 function Toast(toastOptions) {
     var options = __assign(__assign({}, currentOptions), parseOptions(toastOptions));
     var context = (typeof options.context === 'function'

@@ -15,13 +15,10 @@ Object.defineProperty(exports, "getSystemInfoSync", {
         return version_2.getSystemInfoSync;
     }
 });
-
 function range(num, min, max) {
     return Math.min(Math.max(num, min), max);
 }
-
 exports.range = range;
-
 function nextTick(cb) {
     if ((0, version_1.canIUseNextTick)()) {
         wx.nextTick(cb);
@@ -31,9 +28,7 @@ function nextTick(cb) {
         }, 1000 / 30);
     }
 }
-
 exports.nextTick = nextTick;
-
 function addUnit(value) {
     if (!(0, validator_1.isDef)(value)) {
         return undefined;
@@ -41,17 +36,13 @@ function addUnit(value) {
     value = String(value);
     return (0, validator_1.isNumber)(value) ? "".concat(value, "px") : value;
 }
-
 exports.addUnit = addUnit;
-
 function requestAnimationFrame(cb) {
     return setTimeout(function () {
         cb();
     }, 1000 / 30);
 }
-
 exports.requestAnimationFrame = requestAnimationFrame;
-
 function pickExclude(obj, keys) {
     if (!(0, validator_1.isPlainObject)(obj)) {
         return {};
@@ -63,9 +54,7 @@ function pickExclude(obj, keys) {
         return prev;
     }, {});
 }
-
 exports.pickExclude = pickExclude;
-
 function getRect(context, selector) {
     return new Promise(function (resolve) {
         wx.createSelectorQuery()
@@ -80,9 +69,7 @@ function getRect(context, selector) {
             });
     });
 }
-
 exports.getRect = getRect;
-
 function getAllRect(context, selector) {
     return new Promise(function (resolve) {
         wx.createSelectorQuery()
@@ -97,9 +84,7 @@ function getAllRect(context, selector) {
             });
     });
 }
-
 exports.getAllRect = getAllRect;
-
 function groupSetData(context, cb) {
     if ((0, version_1.canIUseGroupSetData)()) {
         context.groupSetData(cb);
@@ -107,36 +92,29 @@ function groupSetData(context, cb) {
         cb();
     }
 }
-
 exports.groupSetData = groupSetData;
-
 function toPromise(promiseLike) {
     if ((0, validator_1.isPromise)(promiseLike)) {
         return promiseLike;
     }
     return Promise.resolve(promiseLike);
 }
-
 exports.toPromise = toPromise;
-
 // 浮点数精度处理
 function addNumber(num1, num2) {
     var cardinal = Math.pow(10, 10);
     return Math.round((num1 + num2) * cardinal) / cardinal;
 }
-
 exports.addNumber = addNumber;
 // 限制value在[min, max]之间
 var clamp = function (num, min, max) {
     return Math.min(Math.max(num, min), max);
 };
 exports.clamp = clamp;
-
 function getCurrentPage() {
     var pages = getCurrentPages();
     return pages[pages.length - 1];
 }
-
 exports.getCurrentPage = getCurrentPage;
 exports.isPC = ['mac', 'windows'].includes((0, version_1.getSystemInfoSync)().platform);
 // 是否企业微信

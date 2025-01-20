@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", {value: true});
 exports.VantComponent = void 0;
 var basic_1 = require("../mixins/basic");
-
 function mapKeys(source, target, map) {
     Object.keys(map).forEach(function (key) {
         if (source[key]) {
@@ -10,7 +9,6 @@ function mapKeys(source, target, map) {
         }
     });
 }
-
 function VantComponent(vantOptions) {
     var options = {};
     mapKeys(vantOptions, options, {
@@ -48,5 +46,4 @@ function VantComponent(vantOptions) {
     };
     Component(options);
 }
-
 exports.VantComponent = VantComponent;

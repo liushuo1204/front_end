@@ -2,11 +2,9 @@
 Object.defineProperty(exports, "__esModule", {value: true});
 var component_1 = require("../common/component");
 var utils_1 = require("./utils");
-
 function simpleTick(fn) {
     return setTimeout(fn, 30);
 }
-
 (0, component_1.VantComponent)({
     props: {
         useSlot: Boolean,

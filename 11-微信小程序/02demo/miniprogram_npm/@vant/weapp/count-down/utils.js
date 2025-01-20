@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
 exports.isSameSecond = exports.parseFormat = exports.parseTimeData = void 0;
-
 function padZero(num, targetLength) {
     if (targetLength === void 0) {
         targetLength = 2;
@@ -12,12 +11,10 @@ function padZero(num, targetLength) {
     }
     return str;
 }
-
 var SECOND = 1000;
 var MINUTE = 60 * SECOND;
 var HOUR = 60 * MINUTE;
 var DAY = 24 * HOUR;
-
 function parseTimeData(time) {
     var days = Math.floor(time / DAY);
     var hours = Math.floor((time % DAY) / HOUR);
@@ -32,9 +29,7 @@ function parseTimeData(time) {
         milliseconds: milliseconds,
     };
 }
-
 exports.parseTimeData = parseTimeData;
-
 function parseFormat(format, timeData) {
     var days = timeData.days;
     var hours = timeData.hours, minutes = timeData.minutes, seconds = timeData.seconds,
@@ -61,11 +56,8 @@ function parseFormat(format, timeData) {
     }
     return format.replace('SSS', padZero(milliseconds, 3));
 }
-
 exports.parseFormat = parseFormat;
-
 function isSameSecond(time1, time2) {
     return Math.floor(time1 / 1000) === Math.floor(time2 / 1000);
 }
-
 exports.isSameSecond = isSameSecond;

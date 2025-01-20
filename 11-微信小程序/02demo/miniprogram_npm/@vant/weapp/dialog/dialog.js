@@ -36,12 +36,10 @@ var defaultOptions = {
     confirmButtonOpenType: '',
 };
 var currentOptions = __assign({}, defaultOptions);
-
 function getContext() {
     var pages = getCurrentPages();
     return pages[pages.length - 1];
 }
-
 var Dialog = function (options) {
     options = __assign(__assign({}, currentOptions), options);
     return new Promise(function (resolve, reject) {

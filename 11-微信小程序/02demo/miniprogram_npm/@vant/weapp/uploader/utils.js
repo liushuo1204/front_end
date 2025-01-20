@@ -14,7 +14,6 @@ Object.defineProperty(exports, "__esModule", {value: true});
 exports.chooseFile = exports.isVideoFile = exports.isImageFile = void 0;
 var utils_1 = require("../common/utils");
 var validator_1 = require("../common/validator");
-
 function isImageFile(item) {
     if (item.isImage != null) {
         return item.isImage;
@@ -27,9 +26,7 @@ function isImageFile(item) {
     }
     return false;
 }
-
 exports.isImageFile = isImageFile;
-
 function isVideoFile(item) {
     if (item.isVideo != null) {
         return item.isVideo;
@@ -42,9 +39,7 @@ function isVideoFile(item) {
     }
     return false;
 }
-
 exports.isVideoFile = isVideoFile;
-
 function formatImage(res) {
     return res.tempFiles.map(function (item) {
         return (__assign(__assign({}, (0, utils_1.pickExclude)(item, ['path'])), {
@@ -54,7 +49,6 @@ function formatImage(res) {
         }));
     });
 }
-
 function formatVideo(res) {
     return [
         __assign(__assign({}, (0, utils_1.pickExclude)(res, ['tempFilePath', 'thumbTempFilePath', 'errMsg'])), {
@@ -64,7 +58,6 @@ function formatVideo(res) {
         }),
     ];
 }
-
 function formatMedia(res) {
     return res.tempFiles.map(function (item) {
         return (__assign(__assign({}, (0, utils_1.pickExclude)(item, ['fileType', 'thumbTempFilePath', 'tempFilePath'])), {
@@ -74,13 +67,11 @@ function formatMedia(res) {
         }));
     });
 }
-
 function formatFile(res) {
     return res.tempFiles.map(function (item) {
         return (__assign(__assign({}, (0, utils_1.pickExclude)(item, ['path'])), {url: item.path}));
     });
 }
-
 function chooseFile(_a) {
     var accept = _a.accept, multiple = _a.multiple, capture = _a.capture, compressed = _a.compressed,
         maxDuration = _a.maxDuration, sizeType = _a.sizeType, camera = _a.camera, maxCount = _a.maxCount,
@@ -152,5 +143,4 @@ function chooseFile(_a) {
         }
     });
 }
-
 exports.chooseFile = chooseFile;

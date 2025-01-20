@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
 exports.useChildren = exports.useParent = void 0;
-
 function useParent(name, onEffect) {
     var _a;
     var path = "../".concat(name, "/index");
@@ -39,9 +38,7 @@ function useParent(name, onEffect) {
         }),
     };
 }
-
 exports.useParent = useParent;
-
 function useChildren(name, onEffect) {
     var _a;
     var path = "../".concat(name, "/index");
@@ -72,5 +69,4 @@ function useChildren(name, onEffect) {
         }),
     };
 }
-
 exports.useChildren = useChildren;
